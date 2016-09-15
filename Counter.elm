@@ -26,10 +26,10 @@ update action model =
 view : Signal.Address Action -> Model -> Html
 view address model =
   div [ containerStyle ]
-    [ button [ onClick address Decrement ] [ text "-" ]
+    [ button [ onClick Decrement ] [ text "-" ]
     , div [ countStyle ] [ text (toString model) ]
-    , button [ onClick address Increment ] [ text "+" ]
-    , button [ onClick address Double ] [ text "*2" ]
+    , button [ onClick Increment ] [ text "+" ]
+    , button [ onClick Double ] [ text "*2" ]
     ]
 
 countStyle : Attribute
