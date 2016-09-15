@@ -35,8 +35,8 @@ update action model =
 
 
 -- View
-view : Signal.Address Action -> Model -> Html
-view address model =
+view : Action -> Model -> Html
+view action model =
   div [ containerStyle ]
     [ (App.map Top (Counter.view model.topCounter))
     , (App.map Bottom (Counter.view model.bottomCounter))
