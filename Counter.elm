@@ -23,8 +23,8 @@ update action model =
 
 
 -- View
-view : Signal.Address Action -> Model -> Html
-view address model =
+view : Action -> Model -> Html
+view action model =
   div [ containerStyle ]
     [ button [ onClick Decrement ] [ text "-" ]
     , div [ countStyle ] [ text (toString model) ]
