@@ -36,8 +36,8 @@ update action model =
 view : Signal.Address Action -> Model -> Html
 view address model =
   div [ containerStyle ]
-    [ Counter.view (Signal.forwardTo address Top) model.topCounter
-    , Counter.view (Signal.forwardTo address Bottom) model.bottomCounter
+    [ (App.map Top (Counter.view model.topCounter))
+    , (App.map Bottom (Counter.view model.bottomCounter))
     , button [ onClick address Reset ] [ text "Reset" ]
     ]
 
